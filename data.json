@@ -1,0 +1,40 @@
+{
+  "pages": [
+    {
+      "id": "home",
+      "title": "Home",
+      "content": "<div class='home_page'><h2>Welcome!</h2><img src='assets/images/profile.jpg' alt='My photo' class='profile-pic'><p>Hello and welcome to my portfolio! I'm a junior front-end developer passionate about building clean and modern web applications.</p><div/>"
+    },
+
+    {
+      "id": "about",
+      "title": "About",
+      "content": "<h2>About Me</h2><p>Hello! I am a junior front-end developer with a strong passion for creating clean, responsive, and user-friendly web applications. I have completed multiple front-end development courses on Udemy, covering HTML, CSS, JavaScript, and modern frameworks. Currently, I am enrolled in an intensive 5-month Front-End Development course with Skillbrain to further enhance my skills and gain hands-on experience with real-world projects.</p><p>I enjoy learning new technologies, experimenting with design ideas, and building projects that combine creativity with functionality. My goal is to grow as a developer and contribute to projects that make a difference for users. In my free time, I like exploring new tools, reading about web development trends, and improving my coding practices.</p>"
+    },
+
+    {
+      "id": "projects",
+      "title": "Projects",
+      "content": ""
+    },
+    {
+      "id": "contact",
+      "title": "Contact",
+      "content": "<h2>Contact</h2><p>You can reach me at <a href='mailto:saftaclaudia27@yahoo.com'>saftaclaudia27@yahoo.com</a></p>"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Art portofolio (HTML, JavaScript, Tailwind, Supabase) ",
+      "image": "assets/images/artportofolio.png",
+      "description": "This project is an online art portfolio where artworks can be showcased in a clean and modern layout. It was built with HTML, JavaScript, and Tailwind CSS for fast and responsive styling. The backend is powered by Supabase, which handles data storage and authentication, making it possible to add and manage artworks dynamically. Through this project, I learned how to connect a front-end application with a cloud database and how to build a functional and visually appealing portfolio.",
+      "link": "https://github.com/saftaclaudia/art-portofolio"
+    },
+    {
+      "title": "Personal Portfolio (HTML, CSS, JavaScript, JSON)",
+      "image": "assets/images/portofolio.png",
+      "description": "This is my personal portfolio website, built with HTML, CSS, and JavaScript, where all the page content is generated dynamically from a data.json file. The portfolio includes sections such as Home, About, Contact, and a Projects page where project cards are automatically generated based on the data. This project helped me practice working with dynamic content, JSON data structures, and creating a responsive layout for different devices.",
+      "link": "https://github.com/saftaclaudia/art-portofolio"
+    }
+  ]
+}
