@@ -34,7 +34,7 @@
       "title": "Personal Portfolio (HTML, CSS, JavaScript, JSON)",
       "image": "assets/images/portofolio.png",
       "description": "This is my personal portfolio website, built with HTML, CSS, and JavaScript, where all the page content is generated dynamically from a data.json file. The portfolio includes sections such as Home, About, Contact, and a Projects page where project cards are automatically generated based on the data. This project helped me practice working with dynamic content, JSON data structures, and creating a responsive layout for different devices.",
-      "link": "https://github.com/saftaclaudia/art-portofolio"
+      "link": "https://github.com/saftaclaudia/personal-portofolio"
     }
   ]
 }
