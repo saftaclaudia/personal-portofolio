@@ -7,11 +7,12 @@ async function loadData() {
 function renderMenu(pages) {
   const menu = document.getElementById("menu");
   menu.innerHTML = "";
+
   pages.forEach((page) => {
     const link = document.createElement("a");
     link.href = `#${page.id}`;
     link.textContent = page.title;
-    menu.appendChild(link);
+    menu.append(link);
   });
 }
 
@@ -35,7 +36,6 @@ function renderPage(data, id) {
         <button class="desc-btn">View Description</button>
         <a href="${project.link}" target="_blank" class="github-link">🔗 GitHub</a>
       </div>
-      <p class="project-desc">${project.description}</p>
     `;
 
       container.appendChild(card);
@@ -44,16 +44,28 @@ function renderPage(data, id) {
     content.innerHTML = "<h2>My Projects</h2>";
     content.appendChild(container);
 
-    // Add eventt listener for toggling descriprion
+    // Add event listener for showing modal description
     const buttons = document.querySelectorAll(".desc-btn");
-    buttons.forEach((btn) => {
+
+    buttons.forEach((btn, index) => {
       btn.addEventListener("click", () => {
-        const desc = btn.nextElementSibling;
-        desc.classList.toggle("show");
-        btn.textContent = desc.classList.contains("show")
-          ? "Hide Description"
-          : "View Description";
+        const project = data.projects[index];
+
+        document.getElementById("modal-title").textContent = project.title;
+        document.getElementById("modal-desc").textContent = project.description;
+
+        document.getElementById("modal").style.display = "flex";
       });
+    });
+
+    document.querySelector(".close-btn").addEventListener("click", () => {
+      document.getElementById("modal").style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target.id === "modal") {
+        document.getElementById("modal").style.display = "none";
+      }
     });
   } else {
     content.innerHTML = page.content;
@@ -62,6 +74,8 @@ function renderPage(data, id) {
 
 async function init() {
   const data = await loadData();
+  console.log(data);
+
   renderMenu(data.pages);
 
   function updatePage() {
